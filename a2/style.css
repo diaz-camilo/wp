@@ -1,1 +1,17 @@
 /* Insert your styles here */
+
+header {
+    text-align: center;
+    border: dotted red 1px;
+}
+nav {
+    text-align: center;
+    border: dotted red 1px;
+}
+ul {
+    padding: 10px;
+}
+li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+}
