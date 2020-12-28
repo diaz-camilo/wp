@@ -22,20 +22,21 @@
 
     <header>
       <h1>ANZAC Douglas Raymond Baker - Letters Home</h1>
-    </header>
-
-    <nav>
+      <nav>
       <ul>
-        <li>home</li>
+        <li><a href="#">Home</a></li>
         <li><a href="#">Introduction</a></li>
         <li><a href="#">Letters & Post Cards</a></li>
         <li><a href="#">Descriptions of Battle Action</a></li>
         <li><a href="#">Places</a></li>
         <li><a href="#">Links to related Materials</a></li>
-        <li><a href="#">contact</a></li>
+        <li><a href='contact.html'>contact</a></li>
         
       </ul>
     </nav>
+    </header>
+
+    
 
     <main>
       <article>
