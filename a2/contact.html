@@ -26,6 +26,30 @@
           </nav>
     
     </header>
-    
+    <main>
+      <form class="form" action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post" target="_blank">
+        <fieldset>
+                  <legend>Contact Us</legend>
+                  <div class="grid-container">
+          <div class="grid-label"><label for="name">Name: </label></div>
+          <div class="grid-input"><input type="text" name="name" placeholder="Jon Doe" required value=""/></div>
+          <div class="grid-label"><label for="email">Email: </label></div>  
+          <div class="grid-input"><input type="email" name="email" placeholder="your-email@email.com" required value=""/></div>
+          <div class="grid-label"><label for="mobile">Mobile: </label></div>
+          <div class="grid-input"><input type="number" name="mobile" minlength="10" maxlength="10" placeholder="0404123456" required value="" /></div>  
+          <div class="grid-label"><label for="subject">Subject:</label></div>
+          <div class="grid-input"><input type="text" name="subject" placeholder="Subject" value=""/></div>
+          <div class="grid-label"><label for="message">Message: </label></div> 
+          <div class="grid-input"><input type="text" name="message" placeholder="Type your message here" value=""/></div>
+          <div class="grid-item"></div>
+          <div class="grid-input"><input type="checkbox" value="remember-me"/>Remember me</div> 
+          <div class="grid-item"></div>
+          <div class="grid-input"><input type="submit" value="Send"></div> 
+        </div>
+                  
+                   
+                    </fieldset>
+                  </form>
+    </main>    
 </body>
 </html>

@@ -1,44 +1,112 @@
 /* Insert your styles here */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
 a {
     color: #e9e7da;
     text-decoration: none;
     font-size: 20px;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border: 1px solid #e9e7da;
+    border-radius: 1em;
 }
 a:link,a:visited {
     color: #e9e7da;
 }
-a:hover,a:active {
+a:hover,a:active a:focus {
     color: #fff;
+    background-color: #cda34f;
 }
 body {
+    background-color: #e9e7da;
     padding: 0px;
     margin: 0;
 }
 header {
+    display: flex;
     text-align: center;
     background: #636b46;
     color: #e9e7da;
-    padding-top: 100px;
+    padding: 4em 2em;
 
     /* background:  url('../../media/header-bg.jpg'); */
     background-size: cover;
     margin:0;
 }
 header h1{
-    margin: 0px 15px 200px 15px;
+    margin: 0;
+    line-height: 1em;
     font-size: 75px;
     
 }
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0em;
+    background-color: #373f27;
     
 }
 ul {
-    height: 50;
-    padding: 10px;
+    /* height: 50; */
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0;
     background: rgba(55, 63, 39, 0.5);
 }
 li {
-    display: inline;
-    padding: 0px 10px 0px 10px;
+    display: inline-block;
+    /* padding: 0px 10px 0px 10px; */
+}
+main {
+ /* max-width: 500px;
+ margin: 20 auto;
+ text-align: right; */
+}
+form {
+    /* max-width: 00px;
+    border: solid black 1px;
+    padding: 15px; */
+    
+}
+input {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: solid 2px #373f27;
+    border-radius: 5px;
+    background-color: #e9e7da;
+    color: #373f27;
+    font-size: 25px;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    background-color: #cda34f;
+    padding: 10px;
+}
+.grid-label, .grid-input {
+    background-color: #e9e7da;
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 20px;
+    font-size: 30px;
+    text-align: right;
+}
+.grid-label {
+    text-align: right;
+}
+.grid-input {
+    text-align: left;
+    background-color: hsla (180, 50%,  50%, .5);
 }
