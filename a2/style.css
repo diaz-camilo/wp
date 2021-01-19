@@ -43,15 +43,21 @@ nav {
     top: 0em;
     background-color: #373f27;
     z-index: 10;
+    min-width: 610px;
+    
     
 }
+
+
 
 body {
     /* background: linear-gradient(top, rgba(99, 107, 70, 1), rgba(99, 107, 70, 0.2)); */
     background:#e9e7da;
         /* Image taken from https://www.civilnet.am/wp-content/uploads/2015/02/     gallipoli_turkey_visit_turkey.jpg for educational purposes */
     background-image: url('../../media/gallipoli_beach.jpg');
-    background-size: cover;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: 50% 80%;
     /* background: -moz-linear-gradient(top, rgba(99, 107, 70, 1), rgb(53, 58, 38));
     background: -webkit-linear-gradient(top, rgba(99, 107, 70, 1), rgb(53, 58, 38));
@@ -59,8 +65,8 @@ body {
     line-height: 1.5;
     font-family: sans-serif;
     font-size: 1em;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     padding: 0px;
     margin: 0;
     color: #e9e7da;
@@ -89,6 +95,10 @@ article {
     padding: 1em;
     background-color: rgba(0, 0, 0, 0.445);
     border-radius: 1em;
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+    
         
     
     /* background-image: url('../../media/gallipoli_beach.jpg');
@@ -97,15 +107,67 @@ article {
     filter: opacity(1); */
 }
 
-/* .home:active ~ .contact {
-    display: none;
+/* styling for letters and postcards page */
+
+.postcards > section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1em;
+    padding: 0.5em;
+    font-family: 'Stalemate', cursive;
+    font-size: 1.5em;
+    color: rgba(10, 10, 10, 1);
+    text-shadow: none;
+    margin-bottom: 1em;
+    position: relative;
+    /* left: 100px; */
+}
+
+/* .postcards > input:checked ~ label {
 
 } */
 
+/* styling labels and inputs to hide and show letters */
+.postcards  label{
+    display: inline;
+    border: 1px solid #e9e7da;
+    border-radius: 1em;
+    margin: 1em 0;
+    padding: 0.1em 0.5em;
+    max-width: 100%;
+}
+
+
+    p:first-letter { font-size: 2em; }
+    p:first-line { line-height: 100%; }
+
+.postcards  label:hover {
+    background-color: #cda34f;
+}
+
+input:checked + label {
+    background-color: #cda34f;
+}
+.postcards  input{
+    display: none;
+    
+}
+
+.postcards > input:checked + section{
+    display: block;
+}
+
+.postcards > input + section{
+    display: none;
+}
+
+
+
+/*  */
 
 
 article p {
     max-width: 650px;
+    min-width: 500px;
 }
 
 a {
