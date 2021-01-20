@@ -11,7 +11,7 @@
     <meta itemprop="description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from September 1914 after he joined up in Gympie, Queensland, Australia to May 1918." />
     <meta id="meta-tag-description" property="og:description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from September 1914 after he joined up in Gympie, Queensland, Australia to May 1918." />
 
-    <meta http-equiv="refresh" content="3" >
+    <!-- <meta http-equiv="refresh" content="3" > -->
 
     <title>ANZAC Douglas Raymond Baker</title>
     
@@ -25,8 +25,12 @@
 
     <header>
       <img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914">
-      <p>ANZAC Douglas Raymond Baker ~ Letters Home</p>      
+      <p>ANZAC Douglas <span>Raymond Baker</span><br><span>Letters Home</span></p>
+      
+      
     </header>
+    <label for="show_hide_nav"><span id="menu"></span></label>
+    <input type="checkbox" name="show_hide_nav" id="show_hide_nav">
     <nav>
       
       <a href='index.php'>Home</a>

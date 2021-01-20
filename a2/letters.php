@@ -29,8 +29,11 @@
 
     <header>
       <img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914">
-      <p>ANZAC Douglas Raymond Baker ~ Letters Home</p>
+      <p>ANZAC Douglas <span>Raymond Baker</span><br><span>Letters Home</span></p>
     </header>
+
+    <label for="show_hide_nav"><span id="menu"></span></label>
+    <input type="checkbox" name="show_hide_nav" id="show_hide_nav">
     <nav>
 
       <a href='index.php'>Home</a>
@@ -49,10 +52,11 @@
       <article class="postcards">
         <h2>Letters & Postcards</h2>
         <h3>1914</h3>
-        <label for="nov_22_1914_check">November 22nd. 1914.</label>
+        <label for="nov_22_1914_check">November 22nd, 1914</label>
         <input type="checkbox" name="nov_22_1914_check" id="nov_22_1914_check">
         <section>
-          <p class="date">November 22nd. 1914.</p>
+          <h3>Troopship “Omrah”. In Arabian Sea</h3>
+          <p class="right_align">November 22nd. 1914.</p>
           <p>Pens are being driven at top speed in all directions for we have received word that letters will not be censored, so everyone is writing to catch the mail that is to be put ashore at Aden tomorrow or Tuesday</p>
           <p>I have kept a few notes since leaving Albany so will start from that part of our voyage and tell you all the news. I have kept a few notes since leaving Albany so will start from that part of our voyage and tell you all the news.</p>
           <p>On October 31st we moved into the wharf at Albany from the bay to get water and provisions. We passed a large cruiser [The Minatour] and she looked bosker. The H.M.A.S. Melbourne was also near. The troopship “Pera” was drawn up on the opposite side of the wharf to us and seemed to be manned chiefly by Lascars who seemed a dirty crowd. At 2.30 p.m. we were taken ashore for a march to stretch our legs. It was a grand outing and we went in fatigue dress, without rifles, around the hills of Albany and returned to the Omrah much refreshed. This was our second trip ashore. We left the Albany wharf just as the sun was setting and the town looked very pretty with the fine stretch of water in front and great green hills behind, with huge boulders sticking out here and there. The sunset was really beautiful; altogether our last view of Albany was all that could be desired. When passing the cruisers we were all lined up on deck to salute them and they dipped their flag in return. We anchored in the bay for a night.</p>
@@ -78,12 +82,13 @@
 
 
         </section>
-        <label for="Mar_15_1916">December 27th. 1914.</label>
-        <input type="checkbox" name="Mar_15_1916" id="Mar_15_1916">
+        <label for="Dec_27_1914">December 27th, 1914</label>
+        <input type="checkbox" name="Mar_15_1916" id="Dec_27_1914">
 
 
         <section>
-          <p class="date">December 27th. 1914.</p>
+          <h3>Mena Camp</h3>
+          <p class="right_align">December 27th. 1914.</p>
           <p>It has not seemed a bit like Xmas here and I have missed the usual good times very much although we are all fairly happy here. Our Coy. were on guard all day Xmas Eve and till 7 o’clock Xmas morning. It was just my luck to be on duty from 11 p.m. to 3 a.m. so I saw Xmas day in. I was walking about near the cook’s galley where our cooks were busy making the plum duff and as there were no officers about I had a good time, although I would rather have been in bed. The puddings [5 large ones] were on at 2 a.m. then we had tea and toast - that was my Xmas breakfast. I was relieved at 3 a.m. and had two hours sleep out in the open near the guard tent, there was no room inside for it was full of prisoners.</p>
           <p>Xmas day was a holiday and church parade was held at 9 a.m., after that leave was granted to about 10% of each Coy.. I and several others in our tent had applied for leave but did not get it, so we took it and went out the back way near the pyramids where there was no guard to stop us. There were crowds of soldiers going to town and every tram, cab and motor car was crowded. Each tram had two trailers behind and only one piastre [two and a half pence] (2 cents) is charged to go the whole distance, about 9 miles. The chaps were not satisfied with filling the trams inside but climbed up on the top too. The conductors tried to get them down but there was no hope in the world, so went into town with about twenty on top of each car, who sang all the way in and threw coins to the nigger kids. It was quite an exciting trip and caused much amusement among the people. Everywhere in the city cafes are springing up with English names such as “The Australian Bar”, “The Soldiers Home”, “Sydney Club”, “Soldiers Club”, etc.. All over the place you will see signs saying: “English spoken” and in many of these shops it would take you all your time to make them understand what you want. All the shopkeepers are up to all sorts of dodges to draw the soldiers and the hawkers in the streets pester the life out of us. Most of them know a word or two of English and we are learning a word or two of Arabic and Egyptian. Cairo is indeed a wonderful city and someday we intend to get a guide to show us all round the historical places. Of course we wander about in all sorts of places but it is a great drawback not knowing the language. If we ask anyone anything they generally want to be paid for it. Boot-blacks swarm about everywhere and we get no peace if we have dirty boots, they clean them for half a piastre. We have forgotten all about English money and only talk in piastres now.</p>
           <p>Well, dear Dot, I am rambling along with this letter somehow but to tell you the truth I hardly know what I am writing about for there are fouteeen of us in the tent and the other twelve are by no means quiet. I am trying to write by a flickering candlelight, with a writing pad on my knee. I have tried to quieten the crowd with all sorts of threats but it is no good, perhaps I ought to climb up the largest pyramid where, no doubt, I would get a little peace. A Xmas box arrived for me on Xmas day in the form of a letter from Mother dated Oct. 24th and addressed to Albany. It was very welcome and so was another one which arrived the next day – also from Mum. This letter has got to be postponed I am sorry to say for our supper has arrived in the shape of oranges and I must join in and be sociable, so they say.</p>
@@ -97,10 +102,13 @@
         </section>
 
         <h3>1916</h3>
-        <label for="Mar_15_1916">15th March 1916.</label>
+
+        <label for="Mar_15_1916">15th March 15th, 1916</label>
         <input type="checkbox" name="Mar_15_1916" id="Mar_15_1916">
+        
         <section>
-          <p>15th March 1916.</p>
+          <h3>Serapeum, Suez Canal</h3>
+          <p class="right_align">15th March 1916.</p>
           <p>Dear Alice,</p>
           <p>A letter from you has just come to hand dated Jan. 16th. , It has been a considerable time on the way but I was jolly glad to get it all the same. One that I received about a week ago from Mother was dated Feb 11th so you see the mails are very irregular. </p>
           <p>Since writing to Herb we have not done much or met with any exciting adventures and are still in the same place on the eastern bank of the Suez Canal. The most important event has been the brigading of the machine gun sections of the 3rd Brigade, which was completed on the 13th inst.. The 9th, 10th, 11th and 12th M. G. S’s are now combined and now form the No. 3 Machine Gun Company – we are separated altogether from the Battalions but are still attached to the famous 3rd Brigade. We have a separate camp of our own now laid out in this style:</p>
@@ -120,6 +128,17 @@
 
         </section>
 
+        <label for="Feb_4_1917">February 4th, 1917</label>
+        <input type="checkbox" name="Feb_4_1917" id="Feb_4_1917">
+
+        <section>
+          <h3>France, Fricourt Farm.</h3>
+          <p class="right_align">4th February 1917</p>
+          <p>My Dear Mother,</p>
+          <p>We have just been rudely informed that an Australian mail closes at 11 a.m. this morning, it is now 10.30 a.m. so I am trying to get away a few lines to you, for I do not like a mail to go by.  But there is so little news to tell and everything is ice, snow and frost-bound so that one cannot settle down to do a thing in comfort.  Yesterday we moved from the tents we were in at Millancourt, marched through Albert and now are in warmer quarters at Fricourt – well closed up huts – and we have a fire going all the time, but have to pinch our wood.  There seems to be no chance of a break in the weather – it continues to freeze, I think the temperature is nearly down to Zero.  The last mail from Aus was late in getting here, two days ago I got your long and interesting letter of Dec. 1st and also Doris’s Dec. 17th.  She is a nut of a kid.  Hope she writes again.  This is a slap-up letter, Mum but the Corporal waits to collect the mail.  I am in good health.  Hope all at home are the same. Best of love to everyone from,</p>
+          <p>Your loving son,</p>
+          <p class="right_align">Ray.</p>
+        </section>
 
       </article>
 
