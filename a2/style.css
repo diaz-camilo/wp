@@ -13,7 +13,7 @@ header {
     flex-wrap: wrap;
     /* background: #636b46; */
         /* image taken from https://www.abc.net.au/ww1-anzac/gallipoli/cm/lb/200021788/data/cimage3a-naval-attacks-data.jpg for educational purposes */
-    background-image: url("/media/header_bg.jpg");
+    background-image: url('../../media/header_bg.jpg');
     background-size: cover;
     background-position: 65% 30%;
     filter: sepia(0.4);
@@ -308,7 +308,7 @@ input, textarea {
         border: 1px solid rgba(0, 0, 0, 0.9);
         background-color: rgba(255, 255, 255, 0.7);
         /* hamburger icon taken from https://clawwhite87.blogspot.com/2020/07/hamburger-menu-svg-white.html for educational purposes */
-        background-image: url("/media/menu3.png");
+        background-image: url('../../media/menu3.png');
         background-size: contain;
         border-radius: 5px;
         z-index: 11;
