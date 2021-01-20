@@ -289,23 +289,25 @@ input, textarea {
         display: none;
     }
 
+    .container {
+        padding: 5px;
+    }
+
+
     #show_hide_nav {
-        width: 50px;
-        height: 50px;
-        position:fixed;
-        top: 5px;
-        left: 5px;
+        width: 0px;
+        height: 0px;
         display: none;
     }
 
     #menu {
-        width: 30px;
-        height: 30px;
-        max-width: 30px;
+        width: 70px;
+        height: 70px;
+        max-width: 70px;
         position:fixed;
         top: 7px;
         left: 7px;
-        border: 1px solid rgba(0, 0, 0, 0.9);
+        /* border: 1px solid rgba(0, 0, 0, 0.9); */
         background-color: rgba(255, 255, 255, 0.7);
         /* hamburger icon taken from https://clawwhite87.blogspot.com/2020/07/hamburger-menu-svg-white.html for educational purposes */
         background-image: url('../../media/menu3.png');
