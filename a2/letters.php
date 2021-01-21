@@ -4,21 +4,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="title" content="ANZAC Douglas Raymond Baker" />
     <meta itemprop="name" content="ANZAC Douglas Raymond Baker" />
     <meta property="og:title" content="ANZAC Douglas Raymond Baker" />
     <meta name="description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from September 1914 after he joined up in Gympie, Queensland, Australia to May 1918." />
     <meta itemprop="description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from September 1914 after he joined up in Gympie, Queensland, Australia to May 1918." />
     <meta id="meta-tag-description" property="og:description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from September 1914 after he joined up in Gympie, Queensland, Australia to May 1918." />
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Stalemate&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Libre+Baskerville&family=Libre+Franklin&family=Roboto&display=swap" rel="stylesheet">
 
-    <title>ANZAC Douglas Raymond Baker</title>
+    <title>ANZAC Douglas Raymond Baker - Letters & Postcards</title>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
@@ -27,30 +24,24 @@
   </head>
 
   <body>
-
-  <header>
-      <div class="tooltip"><img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914"><span class="tooltip_text"><p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p></span></div>
+    <header>
+      <div class="tooltip"><img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914"><span class="tooltip_text">
+          <p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p>
+        </span></div>
       <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
-      
-      
     </header>
     <span class="poppy"></span>
     <label for="show_hide_nav"><span id="menu"></span></label>
     <input type="checkbox" name="show_hide_nav" id="show_hide_nav">
-    
-    <nav>
 
+    <nav>
       <a href='index.php'>Home</a>
-      <a href='intro.php'>Introduction</a>
       <a href='places.php'>Places</a>
       <a href='contact.php'>contact</a>
       <a href='letters.php'>Letters & Post Cards</a>
       <a href='descriptions.php'>Descriptions of Battle Action</a>
       <a href='links.php'>Links to related Materials</a>
-
     </nav>
-
-
 
     <main>
       <article class="postcards">
@@ -80,15 +71,10 @@
           <p>Wednesday, 18th. We are travelling at about 12 knots. The sea is very calm and smooth, we have had no rough weather at all. One chap here said he believes the Bay of Biscay will stop rolling as soon as we get there. We could see land this morning on the starboard side, the only sight of India we are likely to get. All the New Zealand boats have gone on ahead of us and only nine other troopships are with us - two lines of five each and a cruiser in front.</p>
           <p>Today was pay day, we only get ten shillings a fortnight, not nearly enough to keep us going. The German prisoners seem to be starting their tricks already. This morning one fat German officer asked the sentry to take a towel to one of the other prisoners. It was nicely folded up and the sentry took it to the captain of the guard who shook it out and a note dropped from it. We have not heard what the contents of the note are but the prisoners are watched more closely. The German officers were offered parole when they came on board but refused.</p>
           <p>Monday, Nov. 23rd. Since getting up this morning we have been in sight of land, Sokotra Island, near the bay of Aden. Before you get this letter we will be in England if all goes well. We expect to get to Aden Tuesday night, 24th Nov., three months since we left Gympie</p>
-
-
-
-
-
         </section>
+
         <label for="Dec_27_1914">December 27th, 1914</label>
         <input type="checkbox" name="Mar_15_1916" id="Dec_27_1914">
-
 
         <section>
           <h3>Mena Camp</h3>
@@ -109,7 +95,7 @@
 
         <label for="Mar_15_1916">March 15th, 1916</label>
         <input type="checkbox" name="Mar_15_1916" id="Mar_15_1916">
-        
+
         <section>
           <h3>Serapeum, Suez Canal</h3>
           <p class="right_align">15th March 1916.</p>
@@ -121,15 +107,13 @@
           <p>Dear Sister, This letter has been delayed several days through want of time and also want of news. Now I have a little time to myself and also a little news so I will endeavour to finish it off. The most important item is the surprise we of the 3rd Brigade received this morning at church parade when His Royal Highness Edward, Prince of Wales put in his appearance accompanied by General Birdwood and a dozen other “Big Hits”. We were formed up as the three sides of a square so:-</p>
           <img src="/media/diagram_positions.jpg" alt="A diagram of the positions of the Prince and staff, the parson, the 3rd M.G.Co., 9th, 10th, 11th and 12th Battalions, making a square.">
           <p>and I was in a good position to view the Prince. He is very much like the photos you often see and I recognized him at once. He was present throughout the service, the sermon of which was preached by the Rev. Lundy while some other Rev. Pot (i.e. man, name unknown) conducted the filling that usually accompanies the C of E services. After church parade General Birdwood [beloved by all the Anzacs] made a fine speech, opening by introducing the Prince of Wales whom, he said, was very pleased to have the opportunity of seeing the Australians and wished them every success and a safe return to their homes. Gen. Birdwood was very emotional during his speech in his praise of the Australians on their conduct at Gallipoli and he said he considered it an honour to command such fine troops, but he rubbed it in just a little bit about our slackness in discipline although he said we were improving. The Prince looked very boyish and slim, he has a lovely complexion and looks younger than he really is. After Gen, Birdwood’s speech our Brigadier called for three cheers for H.R.H. and they were given with a will while the Prince stood at the salute. Then came a “march past” of the whole brigade, the Prince of Wales taking the salute at a point where an Australian flag had been hoisted. And so the famous 3rd Brigade was honoured by being the first to be reviewed by a Royal Personage. </p>
-          <p>General Birdwood also mentioned in his speech that very shortly we would be going to France and he hoped that we would uphold the honour we had already won.  It will be alright to get there and perhaps we may yet fight against the Germans – but I do not think Our fellows will ever be as good as the first 20,000 that left Australia. The other day we had to undergo another innoculation [the 5th.] this time for Para-Typhoid and for 24 hours it was very severe, first making us very sleepy then giving us pains all over the body and bad head-aches.  We are now being fitted out with all new equipment,  yesterday 16 new Vickers Maxim guns arrived and all our old guns have been handed in – we will get new rifles also for Mark VII ammunition and new clothing, some of which has already been issued.</p>
-          <p>Dear Al, I have proved that I am very light on boots for I have not had a new pair since I left Enoggera where two pairs were issued to each man.  My first pair are worn out but the second are good for months yet – not bad for 19 months wear, with miles and miles of marching in Egypt, Lemnos, Anzac, Malta and on this rotten desert.  The sandstorms here are awful at times, it is impossible to face the wind and sand.  I never thought when reading about them in the school books that I would ever experience them myself.</p>
-          <p>We have heard that all mails to Australia are to be stopped for 6 weeks.  I hope it is not true and that this will reach you safely without too much delay.  How is the dear Mother keeping, that is the question always first with me and I hope she is well and also all of you.   I had a good yarn with Mag in my dreams last night, she was just the same old Peg.  I may not be able to write a decent latter for some time so do not be alarmed if you get none, but I will drop a line as often as possible.</p>
+          <p>General Birdwood also mentioned in his speech that very shortly we would be going to France and he hoped that we would uphold the honour we had already won. It will be alright to get there and perhaps we may yet fight against the Germans – but I do not think Our fellows will ever be as good as the first 20,000 that left Australia. The other day we had to undergo another innoculation [the 5th.] this time for Para-Typhoid and for 24 hours it was very severe, first making us very sleepy then giving us pains all over the body and bad head-aches. We are now being fitted out with all new equipment, yesterday 16 new Vickers Maxim guns arrived and all our old guns have been handed in – we will get new rifles also for Mark VII ammunition and new clothing, some of which has already been issued.</p>
+          <p>Dear Al, I have proved that I am very light on boots for I have not had a new pair since I left Enoggera where two pairs were issued to each man. My first pair are worn out but the second are good for months yet – not bad for 19 months wear, with miles and miles of marching in Egypt, Lemnos, Anzac, Malta and on this rotten desert. The sandstorms here are awful at times, it is impossible to face the wind and sand. I never thought when reading about them in the school books that I would ever experience them myself.</p>
+          <p>We have heard that all mails to Australia are to be stopped for 6 weeks. I hope it is not true and that this will reach you safely without too much delay. How is the dear Mother keeping, that is the question always first with me and I hope she is well and also all of you. I had a good yarn with Mag in my dreams last night, she was just the same old Peg. I may not be able to write a decent latter for some time so do not be alarmed if you get none, but I will drop a line as often as possible.</p>
           <p>Best of love dear Al to you all,</p>
           <p class="right_align">Your loving brother,</p>
           <p class="right_align">Ray.</p>
-          <p>P.S.  Remember me to all friends.</p>
-
-
+          <p>P.S. Remember me to all friends.</p>
         </section>
 
         <label for="Feb_4_1917">February 4th, 1917</label>
@@ -139,22 +123,19 @@
           <h3>France, Fricourt Farm.</h3>
           <p class="right_align">4th February 1917</p>
           <p>My Dear Mother,</p>
-          <p>We have just been rudely informed that an Australian mail closes at 11 a.m. this morning, it is now 10.30 a.m. so I am trying to get away a few lines to you, for I do not like a mail to go by.  But there is so little news to tell and everything is ice, snow and frost-bound so that one cannot settle down to do a thing in comfort.  Yesterday we moved from the tents we were in at Millancourt, marched through Albert and now are in warmer quarters at Fricourt – well closed up huts – and we have a fire going all the time, but have to pinch our wood.  There seems to be no chance of a break in the weather – it continues to freeze, I think the temperature is nearly down to Zero.  The last mail from Aus was late in getting here, two days ago I got your long and interesting letter of Dec. 1st and also Doris’s Dec. 17th.  She is a nut of a kid.  Hope she writes again.  This is a slap-up letter, Mum but the Corporal waits to collect the mail.  I am in good health.  Hope all at home are the same. Best of love to everyone from,</p>
+          <p>We have just been rudely informed that an Australian mail closes at 11 a.m. this morning, it is now 10.30 a.m. so I am trying to get away a few lines to you, for I do not like a mail to go by. But there is so little news to tell and everything is ice, snow and frost-bound so that one cannot settle down to do a thing in comfort. Yesterday we moved from the tents we were in at Millancourt, marched through Albert and now are in warmer quarters at Fricourt – well closed up huts – and we have a fire going all the time, but have to pinch our wood. There seems to be no chance of a break in the weather – it continues to freeze, I think the temperature is nearly down to Zero. The last mail from Aus was late in getting here, two days ago I got your long and interesting letter of Dec. 1st and also Doris’s Dec. 17th. She is a nut of a kid. Hope she writes again. This is a slap-up letter, Mum but the Corporal waits to collect the mail. I am in good health. Hope all at home are the same. Best of love to everyone from,</p>
           <p>Your loving son,</p>
           <p class="right_align">Ray.</p>
         </section>
-
       </article>
-
-
     </main>
 
     <footer>
-      <div>&copy;<script>
+      <p>&copy; <script>
           document.write(new Date().getFullYear());
-        </script> Camilo Jaramillo Diaz, s3820251. Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+        </script> Camilo Jaramillo Diaz, s3820251. <a href="https://github.com/diaz-camilo"><img src='../../media/GitHub-Mark-Light-32px.png' alt="github logo, links to Camilo's github repo"></a><br>Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </p>
+      <p>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia. </p>
+      <p><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></p>
     </footer>
 
   </body>
