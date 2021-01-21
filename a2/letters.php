@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Stalemate&display=swap" rel="stylesheet">
 
-    <!-- <meta http-equiv="refresh" content="3" > -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Libre+Baskerville&family=Libre+Franklin&family=Roboto&display=swap" rel="stylesheet">
 
     <title>ANZAC Douglas Raymond Baker</title>
 
@@ -27,13 +28,16 @@
 
   <body>
 
-    <header>
-      <img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914">
-      <p>ANZAC Douglas <span>Raymond Baker</span><br><span>Letters Home</span></p>
+  <header>
+      <div class="tooltip"><img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914"><span class="tooltip_text"><p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p></span></div>
+      <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
+      
+      
     </header>
-
+    <span class="poppy"></span>
     <label for="show_hide_nav"><span id="menu"></span></label>
     <input type="checkbox" name="show_hide_nav" id="show_hide_nav">
+    
     <nav>
 
       <a href='index.php'>Home</a>
@@ -103,7 +107,7 @@
 
         <h3>1916</h3>
 
-        <label for="Mar_15_1916">15th March 15th, 1916</label>
+        <label for="Mar_15_1916">March 15th, 1916</label>
         <input type="checkbox" name="Mar_15_1916" id="Mar_15_1916">
         
         <section>

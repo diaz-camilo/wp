@@ -12,7 +12,8 @@
     <meta itemprop="description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from September 1914 after he joined up in Gympie, Queensland, Australia to May 1918." />
     <meta id="meta-tag-description" property="og:description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from September 1914 after he joined up in Gympie, Queensland, Australia to May 1918." />
 
-    <!-- <meta http-equiv="refresh" content="3" > -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Libre+Baskerville&family=Libre+Franklin&family=Roboto&display=swap" rel="stylesheet">
 
     <title>ANZAC Douglas Raymond Baker</title>
 
@@ -24,13 +25,16 @@
 
   <body>
 
-    <header>
-      <img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914">
-      <p>ANZAC Douglas <span>Raymond Baker</span><br><span>Letters Home</span></p>
+  <header>
+      <div class="tooltip"><img src='../../media/avatar.jpg' alt="D.R. Baker F.Co one of the soldiers photographed in The Queenslander Pictorial supplement to The Queenslander 1914"><span class="tooltip_text"><p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p></span></div>
+      <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
+      
+      
     </header>
-    
+    <span class="poppy"></span>
     <label for="show_hide_nav"><span id="menu"></span></label>
     <input type="checkbox" name="show_hide_nav" id="show_hide_nav">
+    
     <nav>
 
       <a href='index.php'>Home</a>
@@ -42,51 +46,57 @@
       <a href='links.php'>Links to related Materials</a>
 
     </nav>
+    
 
 
 
     <main>
-      <form class="form" action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post" target="_blank">
+    
+      
 
-        <article>
-          <div class="grid-container">
-            <div class="grid-label"><label for="name">Name: </label></div>
-            <div class="grid-input"><input type="text" id="name" name="name" placeholder="Jon Doe" required value="" /></div>
-            <div class="grid-label"><label for="email">Email: </label></div>
-            <div class="grid-input"><input type="email" id="email" name="email" placeholder="your-email@email.com" required value="" /></div>
-            <div class="grid-label"><label for="mobile">Mobile: </label></div>
-            <div class="grid-input"><input type="tel" id="mobile" name="mobile" minlength="10" maxlength="10" placeholder="0404123456" required value="" /></div>
-            <div class="grid-label"><label for="subject">Subject:</label></div>
-            <div class="grid-input"><input type="text" id="subject" name="subject" placeholder="Subject" value="" /></div>
-            <div class="grid-label"><label for="message">Message: </label></div>
-            <div class="grid-input"><textarea id="message" rows="10" name="message" placeholder="Type your message here" value=""></textarea></div>
-            <div class="grid-item"></div>
-            <div class="grid-input">
+        <article >
+        <form class="grid-container" class="form" action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post" target="_blank">
 
-              <label class="container">Remember me
-                <input type="checkbox" name="remember-me" id="remember-me" checked="checked" />
-                <span class="checkmark"></span>
-              </label>
+          <label class="grid-label" for="name">Name: </label>
+          <input class="grid-input" type="text" id="name" name="name" placeholder="Jon Doe" required value="" />
+
+          <label class="grid-label" for="email">Email: </label>
+          <input class="grid-input" type="email" id="email" name="email" placeholder="your-email@email.com" required value="" />
+
+          <label class="grid-label" for="mobile">Mobile: </label>
+          <input class="grid-input" type="tel" id="mobile" name="mobile" minlength="10" maxlength="10" placeholder="0404123456" required value="" />
+
+          <label class="grid-label" for="subject">Subject:</label>
+          <input class="grid-input" type="text" id="subject" name="subject" placeholder="Subject" value="" />
+
+          <label class="grid-label" for="message">Message: </label>
+          <textarea class="grid-input" id="message" rows="10" name="message" placeholder="Type your message here" value=""></textarea>
+          
+          <div class="grid-item"></div>
+          
+          <label class="container">Remember me<input type="checkbox" name="remember-me" id="remember-me" checked="checked" /><span class="checkmark"></span></label>
 
 
-              <!-- <input type="checkbox" value="remember-me"/>Remember me</div>  -->
-              <div class="grid-item"></div>
-              <div class="grid-input"><input type="submit" name="send" value="Send"></div>
-            </div>
+            
+          <div class="grid-item"></div>
+          <input class="grid-input" type="submit" name="send" value="Send">
+          </form>
         </article>
 
 
 
-      </form>
+      
     </main>
+    
 
     <footer>
       <div>&copy;<script>
           document.write(new Date().getFullYear());
-        </script> Camilo Jaramillo Diaz, s3820251. Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+        </script> Camilo Jaramillo Diaz, s3820251. Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
+      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.
+      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
     </footer>
+    
 
   </body>
 </php>
