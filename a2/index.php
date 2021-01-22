@@ -80,7 +80,7 @@
             <li>CB = Confined to Barracks (leave stopped as a punishment)</li>
             <li>big hits = top ranked officers.</li>
             <li> brass hats = top ranked officers.</li>
-            <li>dry canteen=bar and/or cafeteria, etc. where no alcohol is served.</li>
+            <li>dry canteen = bar and/or cafeteria, etc. where no alcohol is served.</li>
             <li>wet canteen = bar and/or cafeteria, etc. where alcohol is available.</li>
             <li>sapping = digging a tunnel or deep trench to approach or undermine an enemy position.</li>
             <li>L. Horse = Light Horse.</li>
