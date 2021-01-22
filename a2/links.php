@@ -65,7 +65,7 @@
     <footer>
       <p>&copy; <script>
           document.write(new Date().getFullYear());
-        </script> Camilo Jaramillo Diaz, s3820251. <a href="https://github.com/diaz-camilo"><img src='../../media/GitHub-Mark-Light-32px.png' alt="github logo, links to Camilo's github repo"></a><br>Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </p>
+        </script> Camilo Jaramillo Diaz, s3820251. <a href="https://github.com/diaz-camilo"><img src='../../media/GitHub-Mark-Light-32px.png' alt="github logo, links to Camilo's github repo"></a> ibak6837@bigpond.net.au<br>Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </p>
       <p>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia. </p>
       <p><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></p>
     </footer>

@@ -120,12 +120,40 @@
         <input type="checkbox" name="Feb_4_1917" id="Feb_4_1917">
 
         <section>
-          <h3>France, Fricourt Farm.</h3>
+          <h3>France, Fricourt Farm</h3>
           <p class="right_align">4th February 1917</p>
           <p>My Dear Mother,</p>
           <p>We have just been rudely informed that an Australian mail closes at 11 a.m. this morning, it is now 10.30 a.m. so I am trying to get away a few lines to you, for I do not like a mail to go by. But there is so little news to tell and everything is ice, snow and frost-bound so that one cannot settle down to do a thing in comfort. Yesterday we moved from the tents we were in at Millancourt, marched through Albert and now are in warmer quarters at Fricourt – well closed up huts – and we have a fire going all the time, but have to pinch our wood. There seems to be no chance of a break in the weather – it continues to freeze, I think the temperature is nearly down to Zero. The last mail from Aus was late in getting here, two days ago I got your long and interesting letter of Dec. 1st and also Doris’s Dec. 17th. She is a nut of a kid. Hope she writes again. This is a slap-up letter, Mum but the Corporal waits to collect the mail. I am in good health. Hope all at home are the same. Best of love to everyone from,</p>
           <p>Your loving son,</p>
           <p class="right_align">Ray.</p>
+        </section>
+        <h3>1918</h3>
+
+        <label for="Jan_15_1918">February 15th, 1918</label>
+        <input type="checkbox" name="Jan_15_1918" id="Jan_15_1918">
+        <section>
+          <h3>Sutton Veny, Wilts</h3>
+          <p class="right_align">15th January 1918</p>
+          <p>My Dear Mother,</p>
+          <p>Just a few lines with the photos and I hope they will meet with your approval.  I only ordered a few p. cards and I will get more later so that I may send some to the girls.  They were taken about Dec. 13th, a week after I had left the Hospital at Portsmouth so you will see I had recovered alright from my wound.  I am still keeping well and having a quiet time at this camp.  The weather is very good – for England, rather hard to keep warm but all day every day for the last week the sun has been shining – wonder of wonders.  I have written home often lately and hope my letters arrive alright.  There is no other news to tell you.  Keep well mum dear, give the girls and Herb my love, will be home to see you some day.  Au revoir, best of love.</p>
+          <p class="right_align">Your loving son,</p>
+          <p class="right_align">Ray</p>
+
+        </section>
+        <label for="Feb_8_18">February 8th, 1918</label>
+        <input type="checkbox" name="Feb_8_18" id="Feb_8_18">
+        <section>
+          <h3>Gander Green Lane</h3>
+          <p class="right_align">12 Holmwood Villas,</p>
+          <p class="right_align">Gander Green Lane.</p>
+          <p class="right_align">8th February 1918</p>
+          <p>My Dear Mother,</p>
+          <p>Nellie is at work – another girl is away from the office so Nellie could not get off so at present I am alone here in the front room before the fire – resting after a good dinner 2 p.m..  Tis a lovely day outside, a cloudless sky, warm sunshine and windy.  My leave started Tuesday morning, I left Sutton Veny Camp by motor and entrained at 8.20 a.m. at Warminster.  Owing to the food shortage each man is allowed to take his ration – sugar 8oz. (=8 ounces =230g.), Tea  2oz.,  Bacon  8ozs. Meat  11/2lb (=1.5 pounds, = .68 kg.), Bread  56oz. (1.58 kg.), - for 4 days.  I took the lot and handed them over to Cousin Annie.</p>
+          <p>A Sgt. Major and I travelled together, the train was a fast one and we got to Paddington at 11 o’clock, dined at a restaurant and went by tube to London Bridge – left our Kits there while we walked about a bit – I met Nellie at London Bridge after she left the office and we went home together.  Had a late breakfast next morning and a walk round Sutton with Uncle John and little Sonny Turner nearly 5 years old – a good kiddy.  At 4.30 I met Nellie at the station.  Thursday I had breakfast with Nellie and went to London seeing her safely to the office.  Then I walked across London Bridge and through the city – got tired and dived down a tube, bought a ticket for 2 d. (=2 pence = 1 cent.) to take me to Victoria Station.  Had to change at Leicester Square – got on the wrong train, changed to another one and found myself back at Leicester Sq. again.  Then found the right one and lobbed out into daylight per moving staircase at Victoria.  Walked to A.I.F. Headquarters, nothing doing there so walked about Westminster for a while – ordered some more photos.  Then I walked to the fashionable quarter, Pall Mall, Regent St., etc. and enjoyed sightseeing.  Too many officers about, got tired of saluting so sought refuge in the good old tube and after changing once or twice arrived at Paddington and made enquiries re trains back to camp.  Took to the tube again and eventually saw light at Charing Cross.  Strolled along the Strand and dined at Y.M.C.A. Aldwich.  Then had a bus ride to London Bridge, strolled about the city in that vicinity, paid 2 d. for a wash and brush up, had two cups of tea and sandwiches at a refreshment bar.  Later on had a shave and boots cleaned and finally met Nellie at the office at 5 p.m..</p>
+          <p>So to date that is how my leave has been spent.  I had a letter from Ed Router just before coming on leave, in answer to mine, he expected to be transferred to the Overseas Training Battalion near Sutton Veny yesterday – perhaps I will see him when I go back – he has had a bundle of mail from Aussie and was “as happy as a King”, his own expression.</p>
+          <p>I hope to be able to write again soon, will close now Mother dear, best of love always to you and all at home,</p>
+          <p class="right_align">Your loving son,</p>
+          <p class="right_align">Ray</p>
         </section>
       </article>
     </main>
@@ -133,7 +161,7 @@
     <footer>
       <p>&copy; <script>
           document.write(new Date().getFullYear());
-        </script> Camilo Jaramillo Diaz, s3820251. <a href="https://github.com/diaz-camilo"><img src='../../media/GitHub-Mark-Light-32px.png' alt="github logo, links to Camilo's github repo"></a><br>Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </p>
+        </script> Camilo Jaramillo Diaz, s3820251. <a href="https://github.com/diaz-camilo"><img src='../../media/GitHub-Mark-Light-32px.png' alt="github logo, links to Camilo's github repo"></a> ibak6837@bigpond.net.au<br>Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </p>
       <p>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia. </p>
       <p><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></p>
     </footer>
