@@ -66,5 +66,22 @@ function footer_module () {
   </body>
 OUTPUT;
 echo $html;
+
+  
+
+}
+
+function read_file () {
+  // echo "hola mundo";
+  if( ($fp = fopen('coma.csv', 'r')) && flock($fp, LOCK_SH) !== false ) {
+    $headings = fgetcsv($fp);
+    while( ($aLineOfCells = fgetcsv($fp)) !== false )
+      $records[] = $aLineOfCells;
+    flock($fp, LOCK_UN);
+    fclose($fp);
+    echo "<p>{$headings[1]}</p>";
+    echo "<p>{$records[0][0]}</p>";
+  }
+
 }
 ?>

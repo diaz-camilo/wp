@@ -223,12 +223,10 @@ main article section img {
 
 /* Letter & Postcard flip */
 div.card3D {
-    max-width: 740px;
-    max-height: 454.5714px;
-    
     width: 85vw;
     height: 52.2143vw;
-    
+    max-width: 740px;
+    max-height: 454.5714px;
   /* overflow: auto; */
     position: relative;
 }
@@ -238,8 +236,7 @@ div.card3D div{
     width: 100%;
     position: absolute;
     transition: 1s;
-    backface-visibility: hidden;
-    
+    backface-visibility: hidden;    
     overflow: auto;
 }
 
