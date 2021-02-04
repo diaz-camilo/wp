@@ -221,6 +221,41 @@ main article section img {
     margin-bottom: 1em;
 }
 
+/* Letter & Postcard flip */
+div.card3D {
+    max-width: 740px;
+    max-height: 454.5714px;
+    
+    width: 85vw;
+    height: 52.2143vw;
+    
+  /* overflow: auto; */
+    position: relative;
+}
+
+div.card3D div{    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 1s;
+    backface-visibility: hidden;
+    
+    overflow: auto;
+}
+
+div.card3D div:nth-child(1) {    
+    transform: rotateY(0deg);
+  }
+  div.card3D div:nth-child(2) {    
+    transform: rotateY(180deg);
+  }
+  div.card3D:hover div:nth-child(1) {
+    transform: rotateY(180deg);
+  }
+  div.card3D:hover div:nth-child(2) {
+    transform: rotateY(360deg);
+  }
+
 /* styling labels and inputs to hide and show letters */
 .postcards  label{
     display: inline;
@@ -448,6 +483,12 @@ input, textarea {
         min-width: 255px;
         border-radius: initial;
     }
+    div.card3D {
+        width: 90vw;
+        height: 55.2857vw;
+    }
+
+
 }
 
 
