@@ -246,6 +246,7 @@ div.card3D div:nth-child(1) {
   }
   div.card3D:hover div:nth-child(2) {
     transform: rotateY(360deg);
+    height: 80vh;
   }
 
 /* styling labels and inputs to hide and show letters */
@@ -298,6 +299,9 @@ input, textarea {
     color: #373f27;
     font-size: 25px;
     width: 100%;
+}
+input:invalid {
+    background-color: #eea8a8;
 }
 .grid-container {
     display: grid;

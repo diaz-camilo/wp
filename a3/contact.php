@@ -5,22 +5,22 @@
 ?>
     <main>
       <article>
-        <form class="grid-container" class="form" action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post" target="_blank">
+        <form class="grid-container" class="form" action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post" target="_blank" onsubmit='return formCheck()' target='_blank'>
 
           <label class="grid-label" for="name">Name: </label>
-          <input class="grid-input" type="text" id="name" name="name" placeholder="Jon Doe" required value="" />
+          <div><input class="grid-input" type="text" id="name" name="name" placeholder="Jon Doe" required value="" onblur="nameCheck()"/><span id="name_validation" class="error"></span></div>
 
           <label class="grid-label" for="email">Email: </label>
-          <input class="grid-input" type="email" id="email" name="email" placeholder="your-email@email.com" required value="" />
+          <div><input class="grid-input" type="email" id="email" name="email" placeholder="your-email@email.com" required value="" onblur="emailCheck()" /><span id="email_validation" class="error"></span></div>
 
           <label class="grid-label" for="mobile">Mobile: </label>
-          <input class="grid-input" type="tel" id="mobile" name="mobile" minlength="10" maxlength="10" placeholder="0404123456" required value="" />
+          <div><input class="grid-input" type="tel" id="mobile" name="mobile" minlength="8" maxlength="15" placeholder="0404 123 456" value="" onblur="mobileCheck()"/><span id="mobile_validation" class="error"></span></div>
 
           <label class="grid-label" for="subject">Subject:</label>
-          <input class="grid-input" type="text" id="subject" name="subject" placeholder="Subject" value="" />
+          <div><input class="grid-input" type="text" id="subject" name="subject" placeholder="Subject" value="" required onblur="subjectCheck()"/><span id="subject_validation" class="error"></span></div>
 
           <label class="grid-label" for="message">Message: </label>
-          <textarea class="grid-input" id="message" rows="10" name="message" placeholder="Type your message here" value=""></textarea>
+          <div><textarea class="grid-input" id="message" rows="10" name="message" placeholder="Type your message here" value="" required onblur="messageCheck()"></textarea><span id="message_validation" class="error"></span></div>
 
           <div class="grid-item"></div>
 
