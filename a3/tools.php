@@ -72,15 +72,115 @@ echo $html;
 }
 
 function read_file () {
-  // echo "hola mundo";
-  if( ($fp = fopen('coma.csv', 'r')) && flock($fp, LOCK_SH) !== false ) {
-    $headings = fgetcsv($fp);
-    while( ($aLineOfCells = fgetcsv($fp)) !== false )
+  if( ($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", 'r')) && flock($fp, LOCK_SH) !== false ) {
+    $headings = fgetcsv($fp,0,"\t");
+    while( ($aLineOfCells = fgetcsv($fp,0,"\t")) !== false )
       $records[] = $aLineOfCells;
     flock($fp, LOCK_UN);
     fclose($fp);
-    echo "<p>{$headings[1]}</p>";
-    echo "<p>{$records[0][0]}</p>";
+
+    $letters = [];
+    $singular_letter = [];
+    for($i=0; $i<count($records); $i++){
+      for($k=0; $k<count($records[$i]); $k++){
+        $singular_letter[$headings[$k]] = $records[$i][$k];
+      }
+      $letters[] = $singular_letter;
+    }
+    
+    foreach ($letters as $letter) {
+        // Letter button
+      echo<<< "LABEL"
+      <label for="{$letter['DateStart']}_check">{$letter['DateStart']}</label>
+      <input type="checkbox" name="{$letter['DateStart']}_check" id="{$letter['DateStart']}_check">
+LABEL;
+      
+      echo '<section>
+              <div class="card3D">';
+      //  set card image
+      if($letter['Type'] == "Postcard"){
+        echo '<div><img src="../../media/postcard.png" alt=""></div>';
+      } else {
+        echo '<div><img src="../../media/envelope.png" alt=""></div>';
+      }
+      echo "<div>";
+
+        // Letter starts here
+        // date
+      if($letter['DateEnd'] != ""){
+        echo "<p class=\"right_align\">Date: {$letter['DateStart']} - {$letter['DateEnd']}</p>";
+      } else {
+        echo "<p class=\"right_align\">Date: {$letter['DateStart']}</p>";
+      }
+        // Town
+      if($letter['Town'] != ""){
+        echo "<p>  Town: {$letter['Town']}</p>";
+      } 
+        // Country
+      if($letter['Country'] != ""){
+        echo "<p>  Country: {$letter['Country']}</p>";
+      }
+        // Transport
+      if($letter['Transport'] != ""){
+        echo "<p>  Transport: {$letter['Transport']}</p>";
+      } 
+      // Battle
+      if($letter['Battle'] != ""){
+        echo "<p>  Battle: {$letter['Battle']}</p>";
+      } 
+      // content   
+      $content = htmlspecialchars_decode($letter['Content']);    
+      echo "<p>{$letter['Content']}</p>";
+        // Close divs and section
+      echo "    </div>
+              </div>
+            </section>";
+      
+
+
+
+// <section>
+// <div class="card3D">
+//   <div><img src="../../media/postcard.jpg" alt=""></div>
+//   <div>
+//     <h3>Troopship “Omrah”. In Arabian Sea</h3>
+//     <p class="right_align">November 22nd. 1914.</p>
+      // $letter['DateStart'];
+      // $letter['DateEnd'];
+      // $letter['Type'];
+      // $letter['Town'];
+      // $letter['Country'];
+      // $letter['Transport'];
+      // $letter['Battle'];
+      // $content = htmlspecialchars_decode($letter['Content']);
+
+
+      // foreach ($letter as $key => $value) {
+      //   if ($value != ""){
+      //     echo "{$key}: {$value} <br>";
+      //   }
+
+        
+      // }
+      // echo "</section>";
+    //   echo "<section>"
+    //   echo "<h3>France, Fricourt Farm</h3>"
+    //   <p class="right_align">4th February 1917</p>
+    //   <p>My Dear Mother,</p>
+    //   <p>We have just been rudely informed that an Australian mail closes at 11 a.m. this morning, it is now 10.30 a.m. so I am trying to get away a few lines to you, for I do not like a mail to go by. But there is so little news to tell and everything is ice, snow and frost-bound so that one cannot settle down to do a thing in comfort. Yesterday we moved from the tents we were in at Millancourt, marched through Albert and now are in warmer quarters at Fricourt – well closed up huts – and we have a fire going all the time, but have to pinch our wood. There seems to be no chance of a break in the weather – it continues to freeze, I think the temperature is nearly down to Zero. The last mail from Aus was late in getting here, two days ago I got your long and interesting letter of Dec. 1st and also Doris’s Dec. 17th. She is a nut of a kid. Hope she writes again. This is a slap-up letter, Mum but the Corporal waits to collect the mail. I am in good health. Hope all at home are the same. Best of love to everyone from,</p>
+    //   <p>Your loving son,</p>
+    //   <p class="right_align">Ray.</p>
+    // </section>
+    }
+
+    
+      
+    
+    echo "</p>";
+
+
+
+    
   }
 
 }
