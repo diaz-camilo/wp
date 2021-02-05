@@ -5,7 +5,7 @@ top_module("ANZAC Douglas Raymond Baker - Letters & Postcards");
 ?>
 <main>
   <article class="postcards">
-    <?php read_file(); ?>
+<?php read_file(); ?>
   </article>
 </main>
 

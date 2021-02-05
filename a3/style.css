@@ -202,19 +202,12 @@ main article section img {
     font-size: 0.6em;
     float: left;
     margin-right: 1em;
-    
-
 }
-
-
-
-
 
 /* styling for letters and postcards */
 .postcards section {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 0.25em;
-    padding: 0.5em;    
+    background-color: initial;
+    padding: 0;    
     font-size: 1.5em;
     color: rgba(10, 10, 10, 1);
     text-shadow: none;
@@ -227,7 +220,6 @@ div.card3D {
     height: 52.2143vw;
     max-width: 740px;
     max-height: 454.5714px;
-  /* overflow: auto; */
     position: relative;
 }
 
@@ -238,6 +230,7 @@ div.card3D div{
     transition: 1s;
     backface-visibility: hidden;    
     overflow: auto;
+    border-radius: 0.25em;
 }
 
 div.card3D div:nth-child(1) {    
@@ -245,6 +238,8 @@ div.card3D div:nth-child(1) {
   }
   div.card3D div:nth-child(2) {    
     transform: rotateY(180deg);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5em; 
   }
   div.card3D:hover div:nth-child(1) {
     transform: rotateY(180deg);
