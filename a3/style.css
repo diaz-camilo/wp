@@ -234,19 +234,21 @@ div.card3D div{
 }
 
 div.card3D div:nth-child(1) {    
-    transform: rotateY(0deg);
+    transform: rotateX(0deg);
   }
   div.card3D div:nth-child(2) {    
-    transform: rotateY(180deg);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 0.5em; 
+    transform: rotateX(180deg);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0.5em;
   }
   div.card3D:hover div:nth-child(1) {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
   }
   div.card3D:hover div:nth-child(2) {
-    transform: rotateY(360deg);
+    transform: rotateX(360deg);
     height: 80vh;
+    transition: height 2s, transform 1s;
+    z-index: 10;
   }
 
 /* styling labels and inputs to hide and show letters */
@@ -299,9 +301,6 @@ input, textarea {
     color: #373f27;
     font-size: 25px;
     width: 100%;
-}
-input:invalid {
-    background-color: #eea8a8;
 }
 .grid-container {
     display: grid;

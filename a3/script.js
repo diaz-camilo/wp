@@ -17,6 +17,12 @@ function clearErrors() {
     }
 }
 
+function storeInfo(id) {
+    if (getid('remember-me').checked == true  && typeof(Storage) !== 'undefined') {        
+        localStorage.setItem (String(id), getid(String(id)).value); 
+    }
+}
+
 // Check the name - make sure only english alphabet character
 function nameCheck() {
     var name = getid('name').value;
@@ -24,6 +30,7 @@ function nameCheck() {
     if (pattern.test(name)) {
         getid('name_validation').innerHTML = "";
         getid('name').style.background = "#e9e7da";
+        storeInfo('name');
         return true;
     }
     else {
@@ -41,6 +48,7 @@ function emailCheck() {
     if (pattern.test(email)) {
         getid('email_validation').innerHTML = "";
         getid('email').style.background = "#e9e7da";
+        storeInfo('email');
         return true;
     }
     else {
@@ -58,6 +66,7 @@ function mobileCheck() {
     if (pattern.test(mobile)) {
         getid('mobile_validation').innerHTML = "";
         getid('mobile').style.background = "#e9e7da";
+        storeInfo('mobile');
         return true;
     }
     else {
@@ -108,13 +117,43 @@ function formValidate() {
     // clear all errors, even if it's the first run
     clearErrors();
     var countErrors = 0;
-    // Is their first name 'Steve'
     if (!nameCheck()) countErrors++;
-    // Are they a scientist?
-    if (!scientistCheck()) countErrors++;
-    // Is the filename in format xxxxx.pdf?
-    if (!fileNameCheck()) countErrors++;
-    // Block or allow submission depending on number of errors
+    if (!emailCheck()) countErrors++;
+    if (!mobileCheck()) countErrors++;
+    if (!subjectCheck()) countErrors++;
+    if (!messageCheck()) countErrors++;
+
     console.log(countErrors);
     return (countErrors == 0);
+}
+
+function rememberMe(){
+    if (getid('remember-me').checked == true  && typeof(Storage) !== 'undefined') {        
+        nameCheck();
+        emailCheck();
+        mobileCheck();
+    } else if (getid('remember-me').checked != true  && typeof(Storage) !== 'undefined'){
+        localStorage.removeItem('name');
+        localStorage.removeItem('email');
+        localStorage.removeItem ('mobile');        
+    }
+}
+
+function retriveUser() {
+    if (typeof(Storage) !== 'undefined'){
+        var name = localStorage.getItem('name');
+        if (name != null){
+            getid('name').value = name;
+        }
+        var mobile = localStorage.getItem('mobile');
+        if (mobile != null){
+            getid('mobile').value = mobile;
+        }
+        var email = localStorage.getItem('email');
+        if (email != null){
+            getid('email').value = email;
+        }
+        
+
+    }
 }

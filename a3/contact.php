@@ -24,7 +24,7 @@
 
           <div class="grid-item"></div>
 
-          <label class="container">Remember me<input type="checkbox" name="remember-me" id="remember-me" checked="checked" /><span class="checkmark"></span></label>
+          <label class="container" onclick="rememberMe()">Remember me<input type="checkbox" name="remember-me" id="remember-me" checked="checked" /><span class="checkmark"></span></label>
 
           <div class="grid-item"></div>
 
@@ -36,4 +36,5 @@
     <?php
       footer_module();
     ?>
+    <script> retriveUser(); </script>
 </php>
