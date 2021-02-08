@@ -6,7 +6,7 @@ function getid(sP) {
 
 // get all the elements of class 'error', clear the inner html
 function clearErrors() {
-    alert("about to clear errors");
+    
     var allErrors = document.getElementsByClassName('error');
     for (var i = 0; i < allErrors.length; i++) {
         allErrors[i].innerHTML = "";
@@ -74,6 +74,7 @@ function mobileCheck() {
         getid('mobile_validation').style.color = "#f88";
         getid('mobile').style.background = "#eaa";
         return false;
+        
     }
 }
 

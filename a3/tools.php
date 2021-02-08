@@ -52,7 +52,6 @@ function top_module ($title) {
       </nav>
 OUTPUT;
 echo $html;
-
 }
 
 function footer_module () {
@@ -67,9 +66,6 @@ function footer_module () {
   </body>
 OUTPUT;
 echo $html;
-
-  
-
 }
 
 function read_file () {
@@ -150,4 +146,6 @@ LABEL;
   }
 
 }
+
+
 ?>
