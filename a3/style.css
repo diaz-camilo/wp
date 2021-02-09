@@ -294,6 +294,11 @@ div.card3D div:nth-child(1) {
 .postcards p:first-line { line-height: 100%;}
 
 /* contact form and grid styles */
+article>span {
+    width: 100%;
+    text-align: center;
+}
+
 input, textarea {
     border: solid 2px #373f27;
     border-radius: 0.5em;
@@ -304,15 +309,25 @@ input, textarea {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: 1fr 5fr ;
     gap: 0.5em;
+    justify-self: stretch;
 }
+/* .grid-input {
+    width: inherit;
+} */
 .grid-label, .grid-input {
     padding: 0.5em 1em;
 }
 .grid-label {
     text-align: right;
 }
+.error {
+    color: #f88;
+    
+    /* text-transform: capitalize; */
+}
+
 
 /* places styles*/
 .places div:nth-child(2n) {

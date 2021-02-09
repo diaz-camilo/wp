@@ -108,7 +108,7 @@ top_module("ANZAC Douglas Raymond Baker - Contact");
 <main>
     <article>
         <span><h1><?php if($formOutcome != '') echo $formOutcome;?></h1></span>
-        <form class="grid-container" class="form" id='contactForm' action='processing.php' method="post" target="_blank" onsubmit='return formValidate()' novalidate>
+        <form class="grid-container" class="form" id='contactForm' action='contact.php' method="post" target="_blank" onsubmit='return formValidate()' novalidate>
 
             <!-- add required -->
             <label class="grid-label" for="name">Name: </label>
