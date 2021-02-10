@@ -12,3 +12,4 @@ function toggleWireframe() {
   
   // repeat above code for other stylesheets you want to toggle
 }
+

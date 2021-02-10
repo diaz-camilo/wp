@@ -26,7 +26,7 @@ function storeInfo(id) {
 // Check the name - make sure only english alphabet character
 function nameCheck() {
     var name = getid('name').value;
-    var pattern = /^[a-zA-Z \-.']{1,100}$/;
+    var pattern = /^([a-zA-Z \-.'áéíóúüñÁÉÍÓÚÜÑ]{1,100})$/;
     if (pattern.test(name)) {
         getid('name_validation').innerHTML = "";
         getid('name').style.background = "#e9e7da";
@@ -34,7 +34,7 @@ function nameCheck() {
         return true;
     }
     else {
-        getid('name_validation').innerHTML = "Please use only characters without accents and these symbols .-'";
+        getid('name_validation').innerHTML = "This field only accepts letters found in the English and Spanish alphabets and spaces, dashes (Lin-Manuel Miranda), apostrophes (O'Connell), periods (Mrs. María Álvarez-Nuñez).";
         getid('name_validation').style.color = "#f88";
         getid('name').style.background = "#eaa";
         return false;
@@ -52,7 +52,7 @@ function emailCheck() {
         return true;
     }
     else {
-        getid('email_validation').innerHTML = "Email is not valid! Please try again";
+        getid('email_validation').innerHTML = "Email is not valid! Please check your email and try again";
         getid('email_validation').style.color = "#f88";
         getid('email').style.background = "#eaa";
         return false;
@@ -70,7 +70,7 @@ function mobileCheck() {
         return true;
     }
     else {
-        getid('mobile_validation').innerHTML = "Mobile must start with 04 or (04) or +614 followed by 8 digits";
+        getid('mobile_validation').innerHTML = "Mobile should start with 04, (04) or +614 and be followed by eight digits. single spaces are alowed between numbers.";
         getid('mobile_validation').style.color = "#f88";
         getid('mobile').style.background = "#eaa";
         return false;
@@ -81,7 +81,7 @@ function mobileCheck() {
 // check subject
 function subjectCheck() {
     var subject = getid('subject').value;
-    var pattern = /^[A-Za-z,.' ;:!?-]+$/;
+    var pattern = /^[ !-;=?-~áéíóúüñÁÉÍÓÚÜÑ]+$/;
     if (pattern.test(subject)) {
         getid('subject_validation').innerHTML = "";
         getid('subject').style.background = "#e9e7da";
@@ -98,7 +98,7 @@ function subjectCheck() {
 // check Message
 function messageCheck() {
     var message = getid('message').value;
-    var pattern = /^[A-Za-z,.' ;:!?(){}-]+$/;
+    var pattern = /^[ !-;=?-~áéíóúüñÁÉÍÓÚÜÑ\n]+$/;
     if (pattern.test(message)) {
         getid('message_validation').innerHTML = "";
         getid('message').style.background = "#e9e7da";
