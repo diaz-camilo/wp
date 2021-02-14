@@ -4,11 +4,22 @@
 // Put your PHP functions and modules here
 function top_module ($title) {
   $style = filemtime("style.css");
+  if (!isset($_SESSION["user"])){
+    $logIOForm = logOut();
+    $hoverStyle = ' id="hoverOn"';
+  } else {
+    $logIOForm = logIn();
+    $hoverStyle = '';
+  }
+  $logIOForm = isset($_SESSION["user"]) ? logOut() : logIn();
   $html = <<<"OUTPUT"
   
   <php lang='en'>
   
     <head>
+
+      <!-- <meta http-equiv="refresh" content="1" > -->
+      
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="title" content=$title />
@@ -37,6 +48,11 @@ function top_module ($title) {
             <p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p>
           </span></div>
         <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
+        <span$hoverStyle>
+          <form action="logIO.php" method="post">
+            $logIOForm
+          </form>
+        </span>
       </header>
       <span class="poppy"></span>
       <label for="show_hide_nav"><span id="menu"></span></label>
@@ -66,6 +82,16 @@ function footer_module () {
   </body>
 OUTPUT;
 echo $html;
+}
+
+function logIn () {
+  return '<input type="text" name="userName" id="userName" placeholder="User Name">
+  <input type="password" name="password" id="password" placeholder="Password">
+  <button type="submit" name="logIO">Log In</button>';
+}
+function logOut () {
+  return "<label>Logged in as {$_SESSION["user"]["Name"]}</label>
+  <button type='submit' name='logIO'>Log Out</button>";
 }
 
 function read_file () {
@@ -105,7 +131,7 @@ LABEL;
         // Letter starts here
         // date
       if($letter['DateEnd'] != ""){
-        echo "<p class=\"right_align\">Date: {$letter['DateStart']} - {$letter['DateEnd']}</p>";
+        echo "<p class=\"right_align\">Date: {$letter['DateStart']} to {$letter['DateEnd']}</p>";
       } else {
         echo "<p class=\"right_align\">Date: {$letter['DateStart']}</p>";
       }

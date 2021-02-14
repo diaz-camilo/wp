@@ -61,6 +61,72 @@ header p{
     font-weight: bold;
     text-align: center;
 }
+header > span {
+    position: absolute;
+    display: grid;
+    justify-content: right;
+    align-content: flex-start;
+    top: 0.5em;
+    right: 0.5em;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 500ms;
+}
+header > span:hover {
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+    /* height: 100%;
+    width: 100%; */
+    padding: 1em;
+}
+header > span form {
+    display: grid;
+    grid-column: auto;
+    grid-template-columns: auto;
+    gap: 1em;
+    margin: 0;
+}
+header > span form * {
+    display: none;
+
+    /* these are hover efects */
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    justify-self: center;
+    align-self: center;
+    border: solid 2px #373f27;
+    border-radius: 0.5em;
+    /* background-color: rgba(233, 218, 218, 1); */
+    color: rgba(55, 63, 39, 0.5);
+    font-size: 25px;
+    padding: 0.1em 0.2em;
+}
+
+header > span form button {
+    display: initial;
+    min-width: initial;
+}
+header > span form label {
+    display: initial;
+    min-width: initial;
+    border: initial;
+    text-shadow: initial;
+}
+
+
+
+header > span:hover form *{
+    display: initial;
+    background-color: #e9e7da;
+    color: #373f27;
+    font-size: 25px;
+}
+
+
+
+
 header p span { 
     display: inline-block;
 }
@@ -477,8 +543,10 @@ input, textarea {
         display: grid;
         grid-column: auto;
         justify-items: center;
+        position: relative;
     }
-    header img {
+
+        header img {
         width: 150px;
         height: auto;
     }
@@ -496,6 +564,10 @@ input, textarea {
     div.card3D {
         width: 90vw;
         height: 55.2857vw;
+    }
+
+    #hoverOn:hover {
+        padding: 100px 1em 1em;
     }
 
 
