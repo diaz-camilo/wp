@@ -15,8 +15,7 @@ if (isset($_SESSION["user"])) {
     // admin page content
 } else {
     //access denied 
-    http_response_code(401);
-    // die('Access Denied');
+    die('Access Denied');
 }
 
 

@@ -142,16 +142,16 @@ top_module("ANZAC Douglas Raymond Baker - Contact");
 
 
       <label class="grid-label" for="name">Name: </label>
-      <div><input class="grid-input" type="text" id="name" name="name" placeholder="<?php echo $placeholders['name'] ?>" value="<?php echo $_POST['name']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="nameCheck()" required /><span id="name_validation" class="error"><?php echo $errorMessages['name']; ?></span></div>
+      <div><input class="grid-input" type="text" id="name" name="name" placeholder="<?php echo $placeholders['name'] ?>" value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="nameCheck()" required /><span id="name_validation" class="error"><?php echo $errorMessages['name']; ?></span></div>
 
       <label class="grid-label" for="email">Email: </label>
-      <div><input class="grid-input" type="email" id="email" name="email" placeholder="<?php echo $placeholders['email'] ?>" value="<?php echo $_POST['email']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="emailCheck()" required /><span id="email_validation" class="error"><?php echo $errorMessages['email']; ?></span></div>
+      <div><input class="grid-input" type="email" id="email" name="email" placeholder="<?php echo $placeholders['email'] ?>" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="emailCheck()" required /><span id="email_validation" class="error"><?php echo $errorMessages['email']; ?></span></div>
 
       <label class="grid-label" for="mobile">Mobile: </label>
-      <div><input class="grid-input" type="tel" id="mobile" name="mobile" minlength="8" maxlength="15" placeholder="<?php echo $placeholders['mobile'] ?>" value="<?php echo $_POST['mobile']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="mobileCheck()" /><span id="mobile_validation" class="error"><?php echo $errorMessages['mobile']; ?></span></div>
+      <div><input class="grid-input" type="tel" id="mobile" name="mobile" minlength="8" maxlength="15" placeholder="<?php echo $placeholders['mobile'] ?>" value="<?php if (isset($_POST['mobile'])) echo $_POST['mobile']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="mobileCheck()" /><span id="mobile_validation" class="error"><?php echo $errorMessages['mobile']; ?></span></div>
 
       <label class="grid-label" for="subject">Subject:</label>
-      <div><input class="grid-input" type="text" id="subject" name="subject" placeholder="<?php echo $placeholders['subject'] ?>" value="<?php echo $_POST['subject']; ?>" required onblur="subjectCheck()" <?php if (!$errorsFound) echo "disabled";?>/><span id="subject_validation" class="error"><?php echo $errorMessages['subject'];?></span></div>
+      <div><input class="grid-input" type="text" id="subject" name="subject" placeholder="<?php echo $placeholders['subject'] ?>" value="<?php if (isset($_POST['subject'])) echo $_POST['subject']; ?>" required onblur="subjectCheck()" <?php if (!$errorsFound) echo "disabled";?>/><span id="subject_validation" class="error"><?php echo $errorMessages['subject'];?></span></div>
 
       <!-- need to fix  -->
       <label class="grid-label" for="message">Message: </label>

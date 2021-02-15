@@ -23,6 +23,17 @@ function storeInfo(id) {
     }
 }
 
+function enlarge() {
+    document.getElementById('hoverOn').classList.add('hover');
+    getid('login_button').style.display = "none";
+}
+
+function collapse() {
+    document.getElementById('hoverOn').classList.remove('hover');
+    getid('login_button').style.display = "initial";
+    this.stopImmediatePropagation();
+}
+
 // Check the name - make sure only english alphabet character
 function nameCheck() {
     var name = getid('name').value;

@@ -49,7 +49,7 @@ function top_module ($title) {
           </span></div>
         <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
         <span$hoverStyle>
-          <form action="logIO.php" method="post">
+          <form action="LogIO.php" method="post">
             $logIOForm
           </form>
         </span>
@@ -90,6 +90,7 @@ function logIn () {
   <button type="submit" name="logIO">Log In</button>';
 }
 function logOut () {
+  if (isset($_SESSION["user"]["Name"]))
   return "<label>Logged in as {$_SESSION["user"]["Name"]}</label>
   <button type='submit' name='logIO'>Log Out</button>";
 }

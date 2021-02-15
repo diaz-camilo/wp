@@ -47,6 +47,7 @@ if (isset($_POST["logIO"])) {
     }
     // Transfer user back to the referring page
     header("Location: " . $_SERVER["HTTP_REFERER"]);
+    
 } else {
     // User got here by not clicking a logIO button, forward them "silently" to the home page.
     header("Location: index.php");
