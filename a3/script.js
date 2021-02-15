@@ -23,15 +23,18 @@ function storeInfo(id) {
     }
 }
 
-function enlarge() {
-    document.getElementById('hoverOn').classList.add('hover');
-    getid('login_button').style.display = "none";
-}
+function showHide() {
 
-function collapse() {
-    document.getElementById('hoverOn').classList.remove('hover');
-    getid('login_button').style.display = "initial";
-    this.stopImmediatePropagation();
+    if (document.getElementById("showHide").checked){
+        document.getElementById("showHide_label").innerHTML = "Log In"
+        document.getElementById("showHide_label").style.backgroundColor = "rgba(0, 0, 0, 0.25)"
+        document.getElementById("showHide_label").style.border = "solid black 1px"
+    } else {
+        document.getElementById("showHide_label").innerHTML = "❌"
+        document.getElementById("showHide_label").style.backgroundColor = "initial"
+        document.getElementById("showHide_label").style.border = "initial"
+    }
+    
 }
 
 // Check the name - make sure only english alphabet character

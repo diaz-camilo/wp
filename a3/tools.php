@@ -6,10 +6,11 @@ function top_module ($title) {
   $style = filemtime("style.css");
   if (!isset($_SESSION["user"])){
     $logIOForm = logOut();
-    $hoverStyle = ' id="hoverOn"';
+    $adminLink = "";
   } else {
     $logIOForm = logIn();
-    $hoverStyle = '';
+   
+    $adminLink = "<a href='edit-letters.php'>Edit Letters</a>";
   }
   $logIOForm = isset($_SESSION["user"]) ? logOut() : logIn();
   $html = <<<"OUTPUT"
@@ -48,8 +49,8 @@ function top_module ($title) {
             <p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p>
           </span></div>
         <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
-        <span$hoverStyle>
-          <form action="LogIO.php" method="post">
+        <span>
+        
             $logIOForm
           </form>
         </span>
@@ -63,6 +64,7 @@ function top_module ($title) {
         <a href='places.php'>Places</a>
         <a href='contact.php'>contact</a>
         <a href='letters.php'>Letters & Post Cards</a>
+        $adminLink
         <a href='descriptions.php'>Descriptions of Battle Action</a>
         <a href='links.php'>Links to related Materials</a>
       </nav>
@@ -85,13 +87,17 @@ echo $html;
 }
 
 function logIn () {
-  return '<input type="text" name="userName" id="userName" placeholder="User Name">
-  <input type="password" name="password" id="password" placeholder="Password">
+  return '<label for="showHide" id="showHide_label" onclick="showHide()">Log In</label>
+  <input type="checkbox" id="showHide">
+  <form action="LogIO.php" method="post">
+  <input type="text" name="userName" id="userName" autocomplete="username" placeholder="User Name">
+  <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Password">
   <button type="submit" name="logIO">Log In</button>';
 }
 function logOut () {
   if (isset($_SESSION["user"]["Name"]))
   return "<label>Logged in as {$_SESSION["user"]["Name"]}</label>
+  <form action='LogIO.php' method='post'>  
   <button type='submit' name='logIO'>Log Out</button>";
 }
 

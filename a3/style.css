@@ -71,24 +71,54 @@ header > span {
     background-color: rgba(0, 0, 0, 0);
     transition: 500ms;
 }
-header > span:hover {
+
+header > span > label {
+    text-align: right;
+    color: black;
+    text-shadow: none;
+    margin: 5px;
+    padding: 0 5px;
+    font-size: 1.5em;
+    border: solid black 1px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+/* header > span:hover {
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     transition: 500ms;
-    /* height: 100%;
-    width: 100%; */
     padding: 1em;
-}
-header > span form {
+} */
+/* header > span form {
     display: grid;
     grid-column: auto;
     grid-template-columns: auto;
     gap: 1em;
     margin: 0;
+} */
+
+header > span input:checked + form {
+    display: grid;
+    grid-column: auto;
+    grid-template-columns: auto;
+    gap: 1em;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+    padding: 1em;
 }
-header > span form * {
+
+header > span input + form {
     display: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header > span > input {display: none;}
+
+
+
+header > span form * {
+    /* display: none; */
 
     /* these are hover efects */
     width: 100%;
@@ -99,12 +129,14 @@ header > span form * {
     border: solid 2px #373f27;
     border-radius: 0.5em;
     /* background-color: rgba(233, 218, 218, 1); */
-    color: rgba(55, 63, 39, 0.5);
+    /* color: rgba(55, 63, 39, 0.5); */
     font-size: 25px;
     padding: 0.1em 0.2em;
+    background-color: #e9e7da;
+    color: #373f27;
 }
 
-header > span form button {
+/* header > span form button {
     display: initial;
     min-width: initial;
 }
@@ -113,16 +145,16 @@ header > span form label {
     min-width: initial;
     border: initial;
     text-shadow: initial;
-}
+} */
 
 
 
-header > span:hover form *{
+/* header > span:hover form *{
     display: initial;
     background-color: #e9e7da;
     color: #373f27;
     font-size: 25px;
-}
+} */
 
 
 
