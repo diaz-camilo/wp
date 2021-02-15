@@ -1,6 +1,5 @@
 <?php
   session_start();
-
 // Put your PHP functions and modules here
 function top_module ($title) {
   $style = filemtime("style.css");
@@ -8,19 +7,14 @@ function top_module ($title) {
     $logIOForm = logOut();
     $adminLink = "";
   } else {
-    $logIOForm = logIn();
-   
+    $logIOForm = logIn();   
     $adminLink = "<a href='edit-letters.php'>Edit Letters</a>";
   }
   $logIOForm = isset($_SESSION["user"]) ? logOut() : logIn();
   $html = <<<"OUTPUT"
   
-  <php lang='en'>
-  
+  <php lang='en'>  
     <head>
-
-      <!-- <meta http-equiv="refresh" content="1" > -->
-      
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="title" content=$title />
@@ -49,8 +43,7 @@ function top_module ($title) {
             <p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p>
           </span></div>
         <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
-        <span>
-        
+        <span>        
             $logIOForm
           </form>
         </span>
@@ -167,18 +160,6 @@ LABEL;
             </section>
             ";
     }
-
-    
-      
-    
-    // echo "</p>";
-
-
-
-    
   }
-
 }
-
-
 ?>

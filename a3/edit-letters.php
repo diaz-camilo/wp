@@ -14,7 +14,7 @@ if (isset($_SESSION["user"])) {
 
     // admin page content
 } else {
-    //access denied 
+    //access denied, redirect to homepage
     header("Location: index.php");
 }
 

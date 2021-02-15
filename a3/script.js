@@ -1,12 +1,14 @@
 /* Insert your javascript here */
-// I am a lazy typer ...
+
+
+// Form validation addapted from lectures, webinars and workshops
 function getid(sP) {
     return document.getElementById(sP);
 }
 
 // get all the elements of class 'error', clear the inner html
 function clearErrors() {
-    
+
     var allErrors = document.getElementsByClassName('error');
     for (var i = 0; i < allErrors.length; i++) {
         allErrors[i].innerHTML = "";
@@ -17,15 +19,9 @@ function clearErrors() {
     }
 }
 
-function storeInfo(id) {
-    if (getid('remember-me').checked == true  && typeof(Storage) !== 'undefined') {        
-        localStorage.setItem (String(id), getid(String(id)).value); 
-    }
-}
-
+// Show/Hide login form
 function showHide() {
-
-    if (document.getElementById("showHide").checked){
+    if (document.getElementById("showHide").checked) {
         document.getElementById("showHide_label").innerHTML = "Log In"
         document.getElementById("showHide_label").style.backgroundColor = "rgba(0, 0, 0, 0.25)"
         document.getElementById("showHide_label").style.border = "solid black 1px"
@@ -34,10 +30,10 @@ function showHide() {
         document.getElementById("showHide_label").style.backgroundColor = "initial"
         document.getElementById("showHide_label").style.border = "initial"
     }
-    
+
 }
 
-// Check the name - make sure only english alphabet character
+// Check the name - make sure only english allowed character are present
 function nameCheck() {
     var name = getid('name').value;
     var pattern = /^([a-zA-Z \-.'áéíóúüñÁÉÍÓÚÜÑ]{1,100})$/;
@@ -88,7 +84,7 @@ function mobileCheck() {
         getid('mobile_validation').style.color = "#f88";
         getid('mobile').style.background = "#eaa";
         return false;
-        
+
     }
 }
 
@@ -127,9 +123,8 @@ function messageCheck() {
 }
 
 
-// This is where it all happens!
+
 function formValidate() {
-    // clear all errors, even if it's the first run
     clearErrors();
     var countErrors = 0;
     if (!nameCheck()) countErrors++;
@@ -137,38 +132,40 @@ function formValidate() {
     if (!mobileCheck()) countErrors++;
     if (!subjectCheck()) countErrors++;
     if (!messageCheck()) countErrors++;
-
-    console.log(countErrors);
     return (countErrors == 0);
 }
 
-function rememberMe(){
-    if (getid('remember-me').checked == true  && typeof(Storage) !== 'undefined') {        
+function rememberMe() {
+    if (getid('remember-me').checked == true && typeof (Storage) !== 'undefined') {
         nameCheck();
         emailCheck();
         mobileCheck();
-    } else if (getid('remember-me').checked != true  && typeof(Storage) !== 'undefined'){
+    } else if (getid('remember-me').checked != true && typeof (Storage) !== 'undefined') {
         localStorage.removeItem('name');
         localStorage.removeItem('email');
-        localStorage.removeItem ('mobile');        
+        localStorage.removeItem('mobile');
+    }
+}
+
+function storeInfo(id) {
+    if (getid('remember-me').checked == true && typeof (Storage) !== 'undefined') {
+        localStorage.setItem(String(id), getid(String(id)).value);
     }
 }
 
 function retriveUser() {
-    if (typeof(Storage) !== 'undefined'){
+    if (typeof (Storage) !== 'undefined') {
         var name = localStorage.getItem('name');
-        if (name != null){
+        if (name != null) {
             getid('name').value = name;
         }
         var mobile = localStorage.getItem('mobile');
-        if (mobile != null){
+        if (mobile != null) {
             getid('mobile').value = mobile;
         }
         var email = localStorage.getItem('email');
-        if (email != null){
+        if (email != null) {
             getid('email').value = email;
         }
-        
-
     }
 }

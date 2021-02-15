@@ -1,10 +1,10 @@
 <?php
 include_once('tools.php');
 
-
 $subject = '';
 $message = '';
 $formOutcome = '';
+// error messages to display below fields with errors
 $errorMessages = [
   "name" => '',
   "email" => '',
@@ -12,6 +12,7 @@ $errorMessages = [
   "subject" => '',
   "message" => ''
 ];
+// Placeholder values to place in the form
 $placeholders = [
   "name" => 'Your name',
   "email" => 'your.email@domain.com',
@@ -23,7 +24,7 @@ $errorsFound = false;
 $filename = "mail.txt";
 
 if (!empty($_POST)) {
-
+  // Validate POST data received
   if (isset($_POST["name"]) && !preg_match("/^()$/", $_POST['name'])) {
     if (!preg_match("/^([a-zA-Z \-.'áéíóúüñÁÉÍÓÚÜÑ]{1,100})$/", $_POST['name'])) {
       $errorsFound = true;
@@ -43,7 +44,6 @@ if (!empty($_POST)) {
     $errorMessages['mobile'] = "Mobile should start with 04, (04) or +614 and be followed by eight digits. single spaces are alowed between numbers.";
   }
 
-
   if (isset($_POST["email"]) && !preg_match("/^()$/", $_POST['email'])) {
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
       $sanEmail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
@@ -57,53 +57,40 @@ if (!empty($_POST)) {
 
   // sanitize subject and message strings and raise an error flag if the result is empty
   if (isset($_POST["subject"])) {
-
-    $subject = filter_input( INPUT_POST, 'subject', FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_BACKTICK | FILTER_FLAG_ENCODE_LOW );
-
+    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_BACKTICK | FILTER_FLAG_ENCODE_LOW);
     $_POST["subject"] = $subject;
     if (preg_match("/^[ ]*$|^$/", $_POST["subject"])) {
-      // $subject = 'Subject can not be blank';
       $errorMessages['subject'] = 'Subject can not be blank';
       $errorsFound = true;
     }
   } else
-  $errorMessages['subject'] = 'Subject is not set';
+    $errorMessages['subject'] = 'Subject is not set';
 
   if (isset($_POST["message"])) {
-
     $message = filter_input(
       INPUT_POST,
-      'message',FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_BACKTICK | FILTER_FLAG_ENCODE_LOW );
-
+      'message',
+      FILTER_SANITIZE_STRING,
+      FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_BACKTICK | FILTER_FLAG_ENCODE_LOW
+    );
     $_POST["message"] = $message;
     if (preg_match("/^[ ]*$|^$/", $message)) {
-      // $message = 'message can not be blank';
       $errorMessages['message'] = 'Message can not be blank';
       $errorsFound = true;
     }
   } else
-  $errorMessages['message'] = 'Message is not set';
+    $errorMessages['message'] = 'Message is not set';
 
   if (!$errorsFound) {
-    // message summary as placeholders for user to see.
-    $formOutcome = "Thank you for your message!";
-    $placeholders["name"] = $_POST["name"];
-    $placeholders["email"] = $_POST["email"];
-    $placeholders["mobile"] = ($_POST["mobile"] == '' ? 'Mobile not provided.' : $_POST["mobile"]);
-    $placeholders["subject"] = $subject;
-    $placeholders["message"] = $message;
-
     // append to csv 
     $areHeadings = true;
     $keys = array_keys($_POST);
-
     if (($fp = fopen($filename, "r")) && flock($fp, LOCK_SH) !== false) {
       $headings = fgetcsv($fp, 0, "\t");
       flock($fp, LOCK_UN);
       fclose($fp);
-
       for ($i = 0; $i < count($keys); $i++) {
-        if ($keys[$i] != $headings[$i]) // bound to break here if keys is longer that headings
+        if ($keys[$i] != $headings[$i])
           $areHeadings = false;
       }
     }
@@ -116,22 +103,19 @@ if (!empty($_POST)) {
     }
     if (($fp = fopen($filename, "a")) && flock($fp, LOCK_EX) !== false) {
       fputcsv($fp, $_POST, "\t");
-
       flock($fp, LOCK_UN);
       fclose($fp);
     }
   } else
     $formOutcome = "There are errors in your form";
-    // put info back on the fields
-} else 
-$errorsFound = true;
+} else
+  $errorsFound = true;
 ?>
 
 <!DOCTYPE php>
 <?php
 include_once('tools.php');
 top_module("ANZAC Douglas Raymond Baker - Contact");
-
 ?>
 <main>
   <article>
@@ -142,32 +126,43 @@ top_module("ANZAC Douglas Raymond Baker - Contact");
 
 
       <label class="grid-label" for="name">Name: </label>
-      <div><input class="grid-input" type="text" id="name" name="name" placeholder="<?php echo $placeholders['name'] ?>" value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="nameCheck()" required /><span id="name_validation" class="error"><?php echo $errorMessages['name']; ?></span></div>
+      <div>
+        <input class="grid-input" type="text" id="name" name="name" placeholder="<?php echo $placeholders['name'] ?>" value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>" <?php if (!$errorsFound) echo "disabled"; ?> onblur="nameCheck()" required />
+        <span id="name_validation" class="error"><?php echo $errorMessages['name']; ?></span>
+      </div>
 
       <label class="grid-label" for="email">Email: </label>
-      <div><input class="grid-input" type="email" id="email" name="email" placeholder="<?php echo $placeholders['email'] ?>" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="emailCheck()" required /><span id="email_validation" class="error"><?php echo $errorMessages['email']; ?></span></div>
+      <div>
+        <input class="grid-input" type="email" id="email" name="email" placeholder="<?php echo $placeholders['email'] ?>" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" <?php if (!$errorsFound) echo "disabled"; ?> onblur="emailCheck()" required /><span id="email_validation" class="error"><?php echo $errorMessages['email']; ?></span>
+      </div>
 
       <label class="grid-label" for="mobile">Mobile: </label>
-      <div><input class="grid-input" type="tel" id="mobile" name="mobile" minlength="8" maxlength="15" placeholder="<?php echo $placeholders['mobile'] ?>" value="<?php if (isset($_POST['mobile'])) echo $_POST['mobile']; ?>" <?php if (!$errorsFound) echo "disabled";?> onblur="mobileCheck()" /><span id="mobile_validation" class="error"><?php echo $errorMessages['mobile']; ?></span></div>
+      <div>
+        <input class="grid-input" type="tel" id="mobile" name="mobile" minlength="8" maxlength="15" placeholder="<?php echo $placeholders['mobile'] ?>" value="<?php if (isset($_POST['mobile'])) echo $_POST['mobile']; ?>" <?php if (!$errorsFound) echo "disabled"; ?> onblur="mobileCheck()" /><span id="mobile_validation" class="error"><?php echo $errorMessages['mobile']; ?></span>
+      </div>
 
       <label class="grid-label" for="subject">Subject:</label>
-      <div><input class="grid-input" type="text" id="subject" name="subject" placeholder="<?php echo $placeholders['subject'] ?>" value="<?php if (isset($_POST['subject'])) echo $_POST['subject']; ?>" required onblur="subjectCheck()" <?php if (!$errorsFound) echo "disabled";?>/><span id="subject_validation" class="error"><?php echo $errorMessages['subject'];?></span></div>
+      <div>
+        <input class="grid-input" type="text" id="subject" name="subject" placeholder="<?php echo $placeholders['subject'] ?>" value="<?php if (isset($_POST['subject'])) echo $_POST['subject']; ?>" required onblur="subjectCheck()" <?php if (!$errorsFound) echo "disabled"; ?> /><span id="subject_validation" class="error"><?php echo $errorMessages['subject']; ?></span>
+      </div>
 
-      <!-- need to fix  -->
       <label class="grid-label" for="message">Message: </label>
-      <div><textarea class="grid-input" id="message" rows="10" name="message" placeholder="<?php echo $placeholders['message'] ?>"  required <?php if (!$errorsFound) echo "disabled";?> onblur="messageCheck()" ><?php echo $message;?></textarea><span id="message_validation" class="error"><?php echo $errorMessages['message'];?></span></div>
+      <div>
+        <textarea class="grid-input" id="message" rows="10" name="message" placeholder="<?php echo $placeholders['message'] ?>" required <?php if (!$errorsFound) echo "disabled"; ?> onblur="messageCheck()"><?php echo $message; ?></textarea><span id="message_validation" class="error"><?php echo $errorMessages['message']; ?></span>
+      </div>
 
-      <div class="grid-item"></div>
+      <div></div>
 
       <label class="container" onclick="rememberMe()">Remember me<input type="checkbox" name="remember-me" id="remember-me" checked="checked" /><span class="checkmark"></span></label>
 
-      <div class="grid-item"></div>
+      <div></div>
 
       <input class="grid-input" type="submit" name="send" id="send" value="Send">
 
-      <div class="grid-item"></div>
+      <div></div>
 
       <label class="container">disable client side validation<input type="checkbox" name="no_validate" onclick="document.getElementById('contactForm').noValidate = this.checked;" checked="checked" /><span class="checkmark"></span></label>
+
     </form>
   </article>
 </main>
