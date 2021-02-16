@@ -55,6 +55,9 @@ header p{
     font-weight: bold;
     text-align: center;
 }
+span#login-mobile {
+    display: none;
+}
 header > span {
     position: absolute;
     display: grid;
@@ -112,7 +115,7 @@ header > span form input {
     background-color: #e9e7da;
 }
 header > span form button {
-    width: 50%;
+    width: 100%;
     background-color: #94cae4;
 }
 header > span form button:hover {
@@ -484,6 +487,9 @@ input, textarea {
 }  
 
 @media only screen and (max-width: 600px) {
+    #login-big-screen {
+        display: none;
+    }
     .grid-container {
         grid-template-columns: auto;
         width: 100%;
@@ -517,10 +523,11 @@ input, textarea {
         border-radius: 5px;
         z-index: 11;
     }
+    
     #show_hide_nav:checked + nav {
         position: fixed;
         display: grid;
-        grid-column: auto;
+        grid-column:auto;
         align-content: center;
         justify-content: left;
         width:100% ;
@@ -532,6 +539,23 @@ input, textarea {
         margin: 2px;
         padding: 2px 10px;
     }
+    span#login-mobile {
+        display: grid;
+        grid-column: auto;
+        row-gap: 15px;
+        color: #e9e7da;
+        font-size: 1.1em;
+        text-align: center;
+        margin: 2px;
+        padding: 2px 10px;
+        border: 0.1em solid #e9e7da;
+        border-radius: 0.5em;
+    }
+    span#login-mobile * {
+        width: initial;
+        display: block;
+
+    }
     header {
         display: grid;
         grid-column: auto;
@@ -539,7 +563,7 @@ input, textarea {
         position: relative;
     }
 
-        header img {
+    header img {
         width: 150px;
         height: auto;
     }

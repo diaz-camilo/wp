@@ -3,14 +3,18 @@
 // Put your PHP functions and modules here
 function top_module ($title) {
   $style = filemtime("style.css");
-  if (!isset($_SESSION["user"])){
-    $logIOForm = logOut();
-    $adminLink = "";
-  } else {
-    $logIOForm = logIn();   
-    $adminLink = "<a href='edit-letters.php'>Edit Letters</a>";
-  }
+  // if (!isset($_SESSION["user"])){
+  //   $logIOForm = logOut();
+  //   $logIOFormMobile = logOut();
+  //   $adminLink = "";
+  // } else {
+  //   $logIOForm = logIn();
+  //   $logIOFormMobile = logInMobile();   
+  //   $adminLink = "<a href='edit-letters.php'>Edit Letters</a>";
+  // }
   $logIOForm = isset($_SESSION["user"]) ? logOut() : logIn();
+  $logIOFormMobile = isset($_SESSION["user"]) ? logOut() : logInMobile();
+  $adminLink = isset($_SESSION["user"]) ? "" : "<a href='edit-letters.php'>Edit Letters</a>";
   $html = <<<"OUTPUT"
   
   <php lang='en'>  
@@ -43,9 +47,8 @@ function top_module ($title) {
             <p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p>
           </span></div>
         <p>ANZAC <span>Douglas Raymond</span> Baker<br><span>Letters Home</span></p>
-        <span>        
-            $logIOForm
-          </form>
+        <span id="login-big-screen">
+        $logIOForm
         </span>
       </header>
       <span class="poppy"></span>
@@ -60,10 +63,13 @@ function top_module ($title) {
         $adminLink
         <a href='descriptions.php'>Descriptions of Battle Action</a>
         <a href='links.php'>Links to related Materials</a>
+        <span id="login-mobile">$logIOFormMobile</span>
       </nav>
 OUTPUT;
 echo $html;
 }
+
+// <span id="login-mobile>$logIOForm</span>
 
 function footer_module () {
   $last_modified = date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME']));
@@ -83,15 +89,25 @@ function logIn () {
   return '<label for="showHide" id="showHide_label" onclick="showHide()">Log In</label>
   <input type="checkbox" id="showHide">
   <form action="LogIO.php" method="post">
-  <input type="text" name="userName" id="userName" autocomplete="username" placeholder="User Name">
-  <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Password">
-  <button type="submit" name="logIO">Log In</button>';
+  <input type="text" name="userName" autocomplete="username" placeholder="User Name">
+  <input type="password" name="password"  autocomplete="current-password" placeholder="Password">
+  <button type="submit" name="logIO">Log In</button>
+  </form>';
+}
+function logInMobile () {
+  return '<label>Log In</label>
+  <form action="LogIO.php" method="post">
+  <input type="text" name="userName" autocomplete="username" placeholder="User Name">
+  <input type="password" name="password"  autocomplete="current-password" placeholder="Password">
+  <button type="submit" name="logIO">Log In</button>
+  </form>';
 }
 function logOut () {
   if (isset($_SESSION["user"]["Name"]))
   return "<label>Logged in as {$_SESSION["user"]["Name"]}</label>
   <form action='LogIO.php' method='post'>  
-  <button type='submit' name='logIO'>Log Out</button>";
+  <button type='submit' name='logIO'>Log Out</button>
+  </form>";
 }
 
 function read_file () {
