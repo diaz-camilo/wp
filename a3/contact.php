@@ -84,6 +84,7 @@ if (!empty($_POST)) {
   if (!$errorsFound) {
     // append to csv 
     $areHeadings = true;
+    $formOutcome = "Thank you for your message!";
     $keys = array_keys($_POST);
     if (($fp = fopen($filename, "r")) && flock($fp, LOCK_SH) !== false) {
       $headings = fgetcsv($fp, 0, "\t");
@@ -157,7 +158,7 @@ top_module("ANZAC Douglas Raymond Baker - Contact");
 
       <div></div>
 
-      <input class="grid-input" type="submit" name="send" id="send" value="Send">
+      <input class="grid-input" type="submit" name="send" id="send" value="Send" <?php if (!$errorsFound) echo "disabled"; ?>>
 
       <div></div>
 

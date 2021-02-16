@@ -14,7 +14,7 @@ function top_module ($title) {
   // }
   $logIOForm = isset($_SESSION["user"]) ? logOut() : logIn();
   $logIOFormMobile = isset($_SESSION["user"]) ? logOut() : logInMobile();
-  $adminLink = isset($_SESSION["user"]) ? "" : "<a href='edit-letters.php'>Edit Letters</a>";
+  $adminLink = isset($_SESSION["user"]) ? "<a href='edit-letters.php'>Edit Letters</a>" : "";
   $html = <<<"OUTPUT"
   
   <php lang='en'>  
