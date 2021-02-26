@@ -1,4 +1,4 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
 <?php
 include_once('tools.php');
 if (isset($_SESSION["user"])) {

@@ -3,21 +3,13 @@
 // Put your PHP functions and modules here
 function top_module ($title) {
   $style = filemtime("style.css");
-  // if (!isset($_SESSION["user"])){
-  //   $logIOForm = logOut();
-  //   $logIOFormMobile = logOut();
-  //   $adminLink = "";
-  // } else {
-  //   $logIOForm = logIn();
-  //   $logIOFormMobile = logInMobile();   
-  //   $adminLink = "<a href='edit-letters.php'>Edit Letters</a>";
-  // }
+  
   $logIOForm = isset($_SESSION["user"]) ? logOut() : logIn();
   $logIOFormMobile = isset($_SESSION["user"]) ? logOut() : logInMobile();
   $adminLink = isset($_SESSION["user"]) ? "<a href='edit-letters.php'>Edit Letters</a>" : "";
   $html = <<<"OUTPUT"
   
-  <php lang='en'>  
+  <html lang='en'>  
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,8 +61,6 @@ OUTPUT;
 echo $html;
 }
 
-// <span id="login-mobile>$logIOForm</span>
-
 function footer_module () {
   $last_modified = date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME']));
   $html = <<<"OUTPUT"
@@ -111,7 +101,11 @@ function logOut () {
 }
 
 function read_file () {
-  if( ($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", 'r')) && flock($fp, LOCK_SH) !== false ) {
+    // Read from Coreteaching
+    // if( ($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", 'r')) && flock($fp, LOCK_SH) !== false ) {
+
+    // Read from current folder
+    if( ($fp = fopen('letters-home.txt', 'r')) && flock($fp, LOCK_SH) !== false ) {
     $headings = fgetcsv($fp,0,"\t");
     while( ($aLineOfCells = fgetcsv($fp,0,"\t")) !== false )
       $records[] = $aLineOfCells;

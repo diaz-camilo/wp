@@ -1,4 +1,4 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
 <?php
   include_once('tools.php');
   top_module("ANZAC Douglas Raymond Baker - Descriptions");
@@ -18,4 +18,4 @@
     <?php
       footer_module();
     ?>
-</php>
+</html>

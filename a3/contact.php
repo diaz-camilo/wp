@@ -29,6 +29,7 @@ if (!empty($_POST)) {
     if (!preg_match("/^([a-zA-Z \-.'áéíóúüñÁÉÍÓÚÜÑ]{1,100})$/", $_POST['name'])) {
       $errorsFound = true;
       $errorMessages['name'] = "This field only accepts letters found in the English and Spanish alphabets and spaces, dashes (Lin-Manuel Miranda), apostrophes (O'Connell), periods (Mrs. María Álvarez-Nuñez).";
+      
     }
   } else {
     $errorsFound = true;
@@ -113,7 +114,7 @@ if (!empty($_POST)) {
   $errorsFound = true;
 ?>
 
-<!DOCTYPE php>
+<!DOCTYPE html>
 <?php
 include_once('tools.php');
 top_module("ANZAC Douglas Raymond Baker - Contact");
@@ -172,4 +173,4 @@ top_module("ANZAC Douglas Raymond Baker - Contact");
 <script>
   retriveUser();
 </script>
-</php>
+</html>
